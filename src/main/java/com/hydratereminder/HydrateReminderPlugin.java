@@ -732,4 +732,15 @@ public class HydrateReminderPlugin extends Plugin
 	{
 		setCurrentSessionHydrationBreaks(getCurrentSessionHydrationBreaks() + HYDRATION_BREAK_INCREMENT);
 	}
+
+	/**
+	 * <p> Takes a hydration break before the interval is finished
+	 * </p>
+	 * @since 2.0.0
+	 */
+	public void hydrateBetweenHydrationBreaks()
+	{
+		incrementCurrentSessionHydrationBreaks();
+		resetHydrateReminderTimeInterval();
+	}
 }
